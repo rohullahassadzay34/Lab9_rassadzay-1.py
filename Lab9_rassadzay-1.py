@@ -15,7 +15,7 @@ def main():
     print(f"Player 1 has {player1.get_wallet()}.")
     print(f"Player 2 has {player2.get_wallet()}")
 
-    answer = input("Do you want to play? y or Y")
+    answer = input("Do you want to play? y or Y \n")
     while answer.lower() == "y":
         print("Tossing...")
 
@@ -35,12 +35,14 @@ def main():
 
         else:
             player2.win_coin()
-            player2.lose_coin()
+            player1.lose_coin()
             print(f"No Match! Player 2 wins a coin.")
             print(f"Player 1 has {player1.get_wallet()}.")
             print(f"Player 2 has {player2.get_wallet()}")
 
-        answer = input("Do you want to play again? y or Y")
+        answer = input("Do you want to play again? y or Y \n")
+
+main()
         
 
 

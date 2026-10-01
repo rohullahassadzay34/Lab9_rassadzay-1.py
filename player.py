@@ -1,3 +1,10 @@
+""" 
+Match Coins Game
+Rohullah Assadzay
+This class represents a player. A player has a name, has a wallet of coins, and has a Coin object to toss.
+
+9/30/2026
+"""
 from coin import Coin
 
 
