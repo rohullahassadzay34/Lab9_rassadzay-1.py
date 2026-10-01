@@ -12,8 +12,8 @@ def main():
     player2 = Player("Player2")
 
     print("--- Coin Match Game ---")
-    print(f"Player 1 has {player1.get_wallet()}.")
-    print(f"Player 2 has {player2.get_wallet()}")
+    print(f"Player 1 has {player1.get_wallet()} coins.")
+    print(f"Player 2 has {player2.get_wallet()} coins.")
 
     answer = input("Do you want to play? y or Y \n")
     while answer.lower() == "y":
@@ -37,10 +37,21 @@ def main():
             player2.win_coin()
             player1.lose_coin()
             print(f"No Match! Player 2 wins a coin.")
-            print(f"Player 1 has {player1.get_wallet()}.")
-            print(f"Player 2 has {player2.get_wallet()}")
+            print(f"Player 1 has {player1.get_wallet()} coins.")
+            print(f"Player 2 has {player2.get_wallet()} coins.")
 
         answer = input("Do you want to play again? y or Y \n")
+        if answer.lower() != "y":
+            print("Final Results:")
+            print(f"Player 1: {player1.get_wallet()} coins.")
+            print(f"Player 2: {player2.get_wallet()} coins.")
+            if player1.get_wallet() > player2.get_wallet():
+                print("Player 1 wins the game!")
+            elif player2.get_wallet() > player1.get_wallet():
+                print("Player 2 wins the game!")
+            else:
+                print("It's a draw!")
+            break
 
 main()
         
